@@ -1,0 +1,81 @@
+/* hero-static — static, brand-mark led organism. */
+
+.org-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  padding: var(--space-16) var(--space-8);
+  min-height: 90vh;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  align-content: center;
+}
+
+@media (min-width: 900px) {
+  .org-hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    padding: var(--space-24) var(--space-16);
+    gap: var(--space-12);
+  }
+}
+
+.org-hero__lockup {
+  grid-column: 1 / -1;
+  margin-bottom: var(--space-4);
+}
+.org-hero__mark { width: 240px; height: auto; image-rendering: pixelated; }
+
+.org-hero__eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-magenta);
+  margin: 0 0 var(--space-4);
+}
+
+.org-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--type-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-6);
+  font-weight: 700;
+}
+
+.org-hero__sub {
+  font-family: var(--font-body);
+  font-size: var(--type-md);
+  color: var(--color-gray);
+  max-width: 40ch;
+  margin: 0 0 var(--space-8);
+}
+
+.org-hero__ctas { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+.org-hero__cta {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--type-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--color-ink);
+  transition: background var(--duration-fast), color var(--duration-fast);
+}
+.org-hero__cta--primary {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.org-hero__cta--primary:hover { background: var(--color-orange); border-color: var(--color-orange); color: var(--color-ink); }
+.org-hero__cta--ghost { color: var(--color-ink); }
+.org-hero__cta--ghost:hover { background: var(--color-ink); color: var(--color-paper); }
+
+.org-hero__art {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  border: 1px solid var(--color-ink);
+}

@@ -1,0 +1,94 @@
+{
+  "version": "v0",
+  "generated_at": "2026-05-02",
+  "source": "DEA-3 lead-enrichment + creative-reference-sites.md",
+  "notes": "Niche-level defaults. Per-lead overrides in lead-enrichment-top10.json. Each niche has a vibe, default palette overlay, recommended hero pairing, and copy register.",
+  "niches": {
+    "tattoo": {
+      "vibe": "raw, hand-pulled, portfolio-as-hero",
+      "palette_overlay": {
+        "ink": "#000000",
+        "paper": "#FFFFFF",
+        "accent": "#FF2D95",
+        "accent_alt": "#FF8800"
+      },
+      "type_register": "display + monospace, all-caps headlines, lowercase body",
+      "hero_pairing": "canvas-dither | cursor-trail-gallery | parallax-dither",
+      "copy_register": "direct, slightly defiant, zero-corp-speak",
+      "ctas": ["Book consult", "See the work", "Walk-ins this week"]
+    },
+    "med_spa": {
+      "vibe": "calm, soft, parallax-on-portrait",
+      "palette_overlay": {
+        "ink": "#1a1a1a",
+        "paper": "#F4ECD8",
+        "accent": "#FF8800",
+        "accent_alt": "#888888"
+      },
+      "type_register": "serif display + body sans, generous leading",
+      "hero_pairing": "parallax-dither | tactile-single-interaction",
+      "copy_register": "warm, expert, results-focused",
+      "ctas": ["Book consultation", "See treatments", "Membership benefits"]
+    },
+    "barber_shop": {
+      "vibe": "neighborhood, classic, lockup-led",
+      "palette_overlay": {
+        "ink": "#000000",
+        "paper": "#FFFFFF",
+        "accent": "#FF8800",
+        "accent_alt": "#888888"
+      },
+      "type_register": "blackletter or condensed display + utility sans",
+      "hero_pairing": "horizontal-showcase | cursor-trail-gallery",
+      "copy_register": "blue-collar, no-frills, schedule-driven",
+      "ctas": ["Walk-ins welcome", "Book chair", "Today's schedule"]
+    },
+    "fitness": {
+      "vibe": "kinetic, particle-burst, performance-coded",
+      "palette_overlay": {
+        "ink": "#000000",
+        "paper": "#FFFFFF",
+        "accent": "#FF2D95",
+        "accent_alt": "#FF8800"
+      },
+      "type_register": "tight condensed display, large numerals",
+      "hero_pairing": "webgl-particle | scroll-driven-horizontal",
+      "copy_register": "punchy, imperative, metric-led",
+      "ctas": ["Start trial", "Book class", "See schedule"]
+    },
+    "restaurant": {
+      "vibe": "menu-as-hero, photo-led, dither-overlay",
+      "palette_overlay": {
+        "ink": "#000000",
+        "paper": "#F4ECD8",
+        "accent": "#FF8800",
+        "accent_alt": "#FF2D95"
+      },
+      "type_register": "editorial serif + handwritten accents",
+      "hero_pairing": "parallax-dither | canvas-dither",
+      "copy_register": "evocative, sensory, place-rooted",
+      "ctas": ["Reserve table", "View menu", "Order takeout"]
+    },
+    "default": {
+      "vibe": "monochrome, high-contrast, motion-restrained",
+      "palette_overlay": {
+        "ink": "#000000",
+        "paper": "#FFFFFF",
+        "accent": "#FF8800",
+        "accent_alt": "#FF2D95"
+      },
+      "type_register": "display + body sans",
+      "hero_pairing": "canvas-dither",
+      "copy_register": "clear, plain, benefit-led",
+      "ctas": ["Get in touch", "See work", "Book a call"]
+    }
+  },
+  "hero_pairings": {
+    "canvas-dither": "Astrodither-native. Uploaded image → Bayer 8×8 dither, slider control. On-brand by default.",
+    "webgl-particle": "OGL particle system targeting a logo or photo. Mouse repels.",
+    "cursor-trail-gallery": "Hover image grid; cursor leaves a trailing thumbnail strip.",
+    "scroll-driven-horizontal": "GSAP ScrollTrigger horizontal showcase. Vertical scroll → horizontal pan.",
+    "tactile-single-interaction": "One bold interaction (pluck, drag, scrub) with subtle audio.",
+    "parallax-dither": "Photo hero with multi-layer parallax + dither shader overlay."
+  }
+}
