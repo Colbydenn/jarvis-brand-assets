@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>footer-mini — componentlib</title>
+  <link rel="stylesheet" href="../../tokens/tokens.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <footer class="org-footer">
+    <div class="org-footer__row">
+      <p class="org-footer__brand">
+        <span class="org-footer__mark">JWB</span>
+        <span class="org-footer__year">© <span data-year>2026</span></span>
+      </p>
+      <ul class="org-footer__links">
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="https://instagram.com/studio" target="_blank" rel="noopener">@studio</a></li>
+      </ul>
+    </div>
+    <p class="org-footer__credit">site by <a href="https://jarvis.example">Jarvis Website Business</a></p>
+  </footer>
+  <script type="module">
+    document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
+  </script>
+</body>
+</html>

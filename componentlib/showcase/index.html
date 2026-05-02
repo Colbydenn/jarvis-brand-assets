@@ -20,48 +20,49 @@
     .pill--ship { color: var(--color-orange); border-color: var(--color-orange); }
     .pill--todo { color: var(--color-gray); }
     .meta { font-size: var(--type-xs); color: var(--color-gray); margin-top: var(--space-2); }
+    .progress { font-family: var(--font-display); font-size: var(--type-xs); color: var(--color-magenta); margin-left: var(--space-2); letter-spacing: var(--tracking-wide); }
   </style>
 </head>
 <body>
   <h1>componentlib v0</h1>
   <p class="sub">Stage 2 component library for Jarvis Website Business preview homepages. Brand-locked. Zero build. <a href="../README.md">README</a> · <a href="https://github.com/Colbydenn/jarvis-brand-assets">GitHub</a></p>
 
-  <h2>Tokens · niche pack v0</h2>
+  <h2>Tokens · niche pack v0 <span class="progress">3/3 ship</span></h2>
   <div class="grid">
     <a class="card" href="../tokens/tokens.css"><span class="pill pill--ship">ship</span><span class="name">tokens.css</span><span class="desc">Palette + type + spacing + motion vars.</span></a>
     <a class="card" href="../tokens/niche-pack.json"><span class="pill pill--ship">ship</span><span class="name">niche-pack.json</span><span class="desc">Vibe + palette + hero pairing per niche.</span></a>
     <a class="card" href="../tokens/copy-patterns.md"><span class="pill pill--ship">ship</span><span class="name">copy-patterns.md</span><span class="desc">Hero headline / CTA / social-proof templates.</span></a>
   </div>
 
-  <h2>Motion stack</h2>
+  <h2>Motion stack <span class="progress">3/3 ship</span></h2>
   <div class="grid">
     <a class="card" href="../motion/lenis-init.js"><span class="pill pill--ship">ship</span><span class="name">lenis-init.js</span><span class="desc">Smooth scroll boot. Respects reduced-motion.</span></a>
     <a class="card" href="../motion/gsap-helpers.js"><span class="pill pill--ship">ship</span><span class="name">gsap-helpers.js</span><span class="desc">Reveal-on-scroll + horizontal pan helpers.</span></a>
     <a class="card" href="../motion/ogl-loader.js"><span class="pill pill--ship">ship</span><span class="name">ogl-loader.js</span><span class="desc">25 KB WebGL boot. Three.js alternative.</span></a>
   </div>
 
-  <h2>Static organisms · 1/8</h2>
+  <h2>Static organisms <span class="progress">8/8 ship</span></h2>
   <div class="grid">
     <a class="card" href="../organisms/hero-static/index.html"><span class="pill pill--ship">ship</span><span class="name">hero-static</span><span class="desc">Lockup-led hero with brand mark + dual CTA.</span></a>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">services-grid</span><span class="desc">3-up service tiles with hover reveal.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">portfolio-strip</span><span class="desc">Horizontal photo strip, lazy-loaded.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">artist-roster</span><span class="desc">Bio cards with social links.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">testimonial-ticker</span><span class="desc">Marquee social proof, monospace.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">faq-accordion</span><span class="desc">Native &lt;details&gt; with brand styling.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">contact-block</span><span class="desc">Hours + address + map embed.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">footer-mini</span><span class="desc">Compact footer, monospace, one social link.</span></span>
+    <a class="card" href="../organisms/services-grid/index.html"><span class="pill pill--ship">ship</span><span class="name">services-grid</span><span class="desc">3-up service tiles with hover reveal.</span></a>
+    <a class="card" href="../organisms/portfolio-strip/index.html"><span class="pill pill--ship">ship</span><span class="name">portfolio-strip</span><span class="desc">Horizontal photo strip, snap-scroll, procedural fill.</span></a>
+    <a class="card" href="../organisms/artist-roster/index.html"><span class="pill pill--ship">ship</span><span class="name">artist-roster</span><span class="desc">Bio cards with social links.</span></a>
+    <a class="card" href="../organisms/testimonial-ticker/index.html"><span class="pill pill--ship">ship</span><span class="name">testimonial-ticker</span><span class="desc">Marquee social proof, monospace, pause-on-hover.</span></a>
+    <a class="card" href="../organisms/faq-accordion/index.html"><span class="pill pill--ship">ship</span><span class="name">faq-accordion</span><span class="desc">Native &lt;details&gt; with brand styling.</span></a>
+    <a class="card" href="../organisms/contact-block/index.html"><span class="pill pill--ship">ship</span><span class="name">contact-block</span><span class="desc">Hours + address + reach + map placeholder.</span></a>
+    <a class="card" href="../organisms/footer-mini/index.html"><span class="pill pill--ship">ship</span><span class="name">footer-mini</span><span class="desc">Compact footer, monospace, single social link.</span></a>
   </div>
 
-  <h2>Signature heroes · 1/6</h2>
+  <h2>Signature heroes <span class="progress">6/6 ship</span></h2>
   <div class="grid">
     <a class="card" href="../heroes/canvas-dither/index.html"><span class="pill pill--ship">ship</span><span class="name">canvas-dither</span><span class="desc">Astrodither-native. Bayer 8×8 over brand palette. Live grid + contrast slider. Image upload supported.</span></a>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">webgl-particle</span><span class="desc">OGL particle system targeting a logo/photo.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">cursor-trail-gallery</span><span class="desc">Hover grid + cursor-trailing thumbnail strip.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">scroll-driven-horizontal</span><span class="desc">GSAP ScrollTrigger horizontal pan showcase.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">tactile-single-interaction</span><span class="desc">One bold pluck/drag with subtle audio.</span></span>
-    <span class="card"><span class="pill pill--todo">todo</span><span class="name">parallax-dither</span><span class="desc">Photo hero with multi-layer parallax + dither shader.</span></span>
+    <a class="card" href="../heroes/webgl-particle/index.html"><span class="pill pill--ship">ship</span><span class="name">webgl-particle</span><span class="desc">OGL particle field. Mouse repels. Brand-palette point colors.</span></a>
+    <a class="card" href="../heroes/cursor-trail-gallery/index.html"><span class="pill pill--ship">ship</span><span class="name">cursor-trail-gallery</span><span class="desc">Trailing tile strip following cursor. Click pins. Static fallback.</span></a>
+    <a class="card" href="../heroes/scroll-driven-horizontal/index.html"><span class="pill pill--ship">ship</span><span class="name">scroll-driven-horizontal</span><span class="desc">GSAP ScrollTrigger horizontal pan showcase.</span></a>
+    <a class="card" href="../heroes/tactile-single-interaction/index.html"><span class="pill pill--ship">ship</span><span class="name">tactile-single-interaction</span><span class="desc">Drag-and-snap line w/ optional WebAudio twang.</span></a>
+    <a class="card" href="../heroes/parallax-dither/index.html"><span class="pill pill--ship">ship</span><span class="name">parallax-dither</span><span class="desc">3-layer parallax under Bayer 8×8 dither overlay.</span></a>
   </div>
 
-  <p class="meta">v0 generated 2026-05-02 · agent 13f4323c-ba87-421f-a39d-73523e6453cd · DEA-6</p>
+  <p class="meta">v0 complete · generated 2026-05-02 · agent 13f4323c-ba87-421f-a39d-73523e6453cd · DEA-6</p>
 </body>
 </html>

@@ -26,21 +26,24 @@ componentlib/
 │   ├── gsap-helpers.js   # scroll-trigger + reveal helpers
 │   └── ogl-loader.js     # WebGL loader + cleanup
 ├── organisms/        # 8 static building blocks (hero, services, gallery, footer, etc.)
-├── heroes/           # 6 signature interactive heroes
-│   └── canvas-dither/    # ✓ shipped
+├── heroes/           # 6 signature interactive heroes (all shipped)
+│   ├── canvas-dither/                # Astrodither-native Bayer 8×8
+│   ├── webgl-particle/               # OGL particle field, mouse-repel
+│   ├── cursor-trail-gallery/         # trailing tile strip
+│   ├── scroll-driven-horizontal/     # GSAP horizontal pan
+│   ├── tactile-single-interaction/   # drag-and-snap line + audio
+│   └── parallax-dither/              # 3-layer parallax + dither overlay
 └── showcase/         # static index — lighter Storybook substitute
     └── index.html        # links every component, mobile-aware
 ```
 
-## Status (v0)
+## Status (v0 — complete)
 
 - [x] Tokens — palette + type + copy patterns + niche-pack v0
 - [x] Motion stack baseline — GSAP, Lenis, OGL loaders
-- [x] 1/8 static organisms (hero-section)
-- [x] 1/6 signature heroes (canvas-dither — Astrodither-native)
-- [ ] 7 remaining organisms (next heartbeat)
-- [ ] 5 remaining signature heroes (next heartbeat)
-- [ ] Showcase index live on GitHub Pages
+- [x] 8/8 static organisms — hero-static, services-grid, portfolio-strip, artist-roster, testimonial-ticker, faq-accordion, contact-block, footer-mini
+- [x] 6/6 signature interactive heroes — canvas-dither, webgl-particle, cursor-trail-gallery, scroll-driven-horizontal, tactile-single-interaction, parallax-dither
+- [x] Showcase index ready for GitHub Pages (workflow at `.github/workflows/pages.yml`)
 
 ## Run locally
 
