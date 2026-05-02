@@ -1,0 +1,110 @@
+/* tactile-single-interaction hero — drag-and-snap line, optional audio */
+
+.ts-hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  overflow: hidden;
+  cursor: grab;
+}
+.ts-hero:active { cursor: grabbing; }
+
+.ts-hero__copy {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 760px;
+  padding: 0 var(--space-8);
+  pointer-events: none;
+}
+
+.ts-hero__eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-magenta);
+  margin: 0 0 var(--space-4);
+}
+
+.ts-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--type-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-6);
+  font-weight: 700;
+}
+
+.ts-hero__sub {
+  font-family: var(--font-body);
+  font-size: var(--type-md);
+  color: var(--color-paper);
+  opacity: 0.75;
+  margin: 0 auto;
+  max-width: 50ch;
+}
+
+.ts-hero__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#tsLine {
+  fill: none;
+  stroke: var(--color-orange);
+  stroke-width: 2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 12px rgba(255, 136, 0, 0.4));
+}
+
+.ts-hero__sound {
+  position: absolute;
+  bottom: var(--space-6);
+  left: var(--space-6);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--color-paper);
+  border: 1px solid var(--color-paper);
+  cursor: pointer;
+  transition: background var(--duration-fast), color var(--duration-fast);
+}
+.ts-hero__sound:hover { background: var(--color-paper); color: var(--color-ink); }
+
+.ts-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-gray);
+  border-radius: 50%;
+}
+.ts-hero__sound[aria-pressed="true"] .ts-dot { background: var(--color-orange); }
+
+.ts-hero__hint {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin: 0;
+  pointer-events: none;
+}

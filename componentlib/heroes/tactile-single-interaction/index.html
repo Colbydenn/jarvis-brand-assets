@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>tactile-single-interaction hero — componentlib</title>
+  <link rel="stylesheet" href="../../tokens/tokens.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="ts-hero" id="tsHero">
+    <div class="ts-hero__copy">
+      <p class="ts-hero__eyebrow">studio.signature</p>
+      <h1 class="ts-hero__title">Pluck the line.</h1>
+      <p class="ts-hero__sub">One interaction. Drag the thread; release to feel it snap. Sound on for the full bit.</p>
+    </div>
+    <svg class="ts-hero__svg" id="tsSvg" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+      <path id="tsLine" d="M 0 300 Q 500 300 1000 300" />
+    </svg>
+    <button class="ts-hero__sound" id="tsSound" type="button" aria-pressed="false">
+      <span class="ts-dot"></span><span>sound off</span>
+    </button>
+    <p class="ts-hero__hint">drag the line</p>
+  </main>
+  <script type="module" src="./hero.js"></script>
+</body>
+</html>

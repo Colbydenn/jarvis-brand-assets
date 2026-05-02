@@ -1,0 +1,105 @@
+/* artist-roster — bio cards w/ social links */
+
+.org-roster {
+  padding: var(--space-16) var(--space-8);
+  max-width: var(--max-w-content);
+  margin: 0 auto;
+}
+
+.org-roster__head { margin-bottom: var(--space-12); }
+
+.org-roster__eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-magenta);
+  margin: 0 0 var(--space-2);
+}
+
+.org-roster__title {
+  font-family: var(--font-display);
+  font-size: var(--type-2xl);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  font-weight: 700;
+}
+
+.org-roster__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 700px) {
+  .org-roster__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.art-card {
+  padding: var(--space-8);
+  border: 1px solid var(--color-ink);
+  background: var(--color-paper);
+  display: flex;
+  flex-direction: column;
+}
+
+.art-card__avatar {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-display);
+  font-size: var(--type-md);
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-6);
+}
+
+.art-card__name {
+  font-family: var(--font-display);
+  font-size: var(--type-lg);
+  margin: 0 0 var(--space-2);
+  letter-spacing: var(--tracking-tight);
+  font-weight: 700;
+}
+
+.art-card__role {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin: 0 0 var(--space-4);
+}
+
+.art-card__bio {
+  font-size: var(--type-base);
+  color: var(--color-gray);
+  margin: 0 0 var(--space-6);
+  flex-grow: 1;
+}
+
+.art-card__links {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-4) 0 0;
+  border-top: 1px solid var(--color-ink);
+  display: flex;
+  gap: var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.art-card__links a {
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-fast);
+}
+.art-card__links a:hover { border-bottom-color: var(--color-orange); color: var(--color-orange); }

@@ -1,0 +1,34 @@
+/* testimonial-ticker — monospace marquee social proof */
+
+.org-ticker {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: var(--space-4) 0;
+  overflow: hidden;
+  border-block: 1px solid var(--color-ink);
+}
+
+.org-ticker__track {
+  display: flex;
+  gap: var(--space-12);
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: var(--type-sm);
+  letter-spacing: var(--tracking-wide);
+  will-change: transform;
+}
+
+.tk-item {
+  flex: 0 0 auto;
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  color: var(--color-paper);
+}
+
+.tk-item b { color: var(--color-orange); font-weight: 400; }
+
+@media (prefers-reduced-motion: reduce) {
+  .org-ticker__track { animation: none !important; transform: none !important; }
+  .org-ticker { white-space: normal; }
+}

@@ -1,0 +1,102 @@
+/* services-grid — 3-up tiles, hover reveal */
+
+.org-services {
+  padding: var(--space-16) var(--space-8);
+  max-width: var(--max-w-content);
+  margin: 0 auto;
+}
+
+.org-services__head { margin-bottom: var(--space-12); }
+
+.org-services__eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-magenta);
+  margin: 0 0 var(--space-2);
+}
+
+.org-services__title {
+  font-family: var(--font-display);
+  font-size: var(--type-2xl);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  font-weight: 700;
+}
+
+.org-services__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 700px) {
+  .org-services__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.svc-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+  border: 1px solid var(--color-ink);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  position: relative;
+  overflow: hidden;
+  transition: background var(--duration-base) var(--ease-out-quart),
+              color var(--duration-base) var(--ease-out-quart),
+              transform var(--duration-base) var(--ease-out-quart);
+}
+
+.svc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-orange);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--duration-base) var(--ease-out-quart);
+  z-index: 0;
+}
+
+.svc-card:hover { color: var(--color-ink); transform: translateY(-2px); }
+.svc-card:hover::before { transform: scaleY(1); }
+.svc-card > * { position: relative; z-index: 1; }
+
+.svc-card__num {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-magenta);
+  margin-bottom: var(--space-6);
+}
+
+.svc-card__title {
+  font-family: var(--font-display);
+  font-size: var(--type-lg);
+  margin: 0 0 var(--space-3);
+  letter-spacing: var(--tracking-tight);
+  font-weight: 700;
+}
+
+.svc-card__desc {
+  font-size: var(--type-base);
+  margin: 0 0 var(--space-6);
+  color: var(--color-gray);
+  flex-grow: 1;
+}
+
+.svc-card:hover .svc-card__desc { color: var(--color-ink); }
+
+.svc-card__meta {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border-top: 1px solid currentColor;
+  padding-top: var(--space-3);
+}

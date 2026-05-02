@@ -1,0 +1,67 @@
+name: Deploy componentlib showcase to GitHub Pages
+
+on:
+  push:
+    branches: [main, componentlib-v0]
+    paths:
+      - "componentlib/**"
+      - "v1/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage site
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          # Copy componentlib + v1 assets into the site root.
+          cp -r componentlib _site/componentlib
+          if [ -d v1 ]; then cp -r v1 _site/v1; fi
+          # Top-level index redirects to showcase.
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=./componentlib/showcase/index.html">
+            <title>Jarvis componentlib</title>
+          </head>
+          <body>
+            <p>Redirecting to <a href="./componentlib/showcase/index.html">componentlib showcase</a>…</p>
+          </body>
+          </html>
+          HTML
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

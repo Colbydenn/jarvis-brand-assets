@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>canvas-dither hero — componentlib</title>
+  <link rel="stylesheet" href="../../tokens/tokens.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="cd-hero" id="cdHero">
+    <canvas class="cd-hero__canvas" id="cdCanvas" aria-hidden="true"></canvas>
+    <div class="cd-hero__copy">
+      <p class="cd-hero__eyebrow">studio.signature</p>
+      <h1 class="cd-hero__title">Get tattoos that age like the work.</h1>
+      <p class="cd-hero__sub">RiNo · Bold blackwork · 12 years in.</p>
+      <div class="cd-hero__ctas">
+        <a class="cd-cta cd-cta--primary" href="#book">Book consult</a>
+        <a class="cd-cta cd-cta--ghost" href="#work">See the work</a>
+      </div>
+    </div>
+    <div class="cd-hero__controls">
+      <label>
+        <span>dither</span>
+        <input type="range" min="2" max="16" step="2" value="8" id="cdGrid">
+      </label>
+      <label>
+        <span>contrast</span>
+        <input type="range" min="0.5" max="2" step="0.05" value="1.1" id="cdContrast">
+      </label>
+      <button id="cdLoad" type="button">Load image</button>
+      <input type="file" id="cdFile" accept="image/*" hidden>
+    </div>
+  </main>
+  <script type="module" src="./hero.js"></script>
+</body>
+</html>

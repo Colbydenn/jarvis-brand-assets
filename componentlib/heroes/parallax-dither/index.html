@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>parallax-dither hero — componentlib</title>
+  <link rel="stylesheet" href="../../tokens/tokens.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="pd-hero" id="pdHero">
+    <div class="pd-hero__layers" id="pdLayers" aria-hidden="true">
+      <div class="pd-layer pd-layer--bg" data-depth="0.05"></div>
+      <div class="pd-layer pd-layer--mid" data-depth="0.18"></div>
+      <div class="pd-layer pd-layer--fore" data-depth="0.36"></div>
+      <canvas class="pd-layer pd-layer--dither" id="pdDither"></canvas>
+    </div>
+    <div class="pd-hero__copy">
+      <p class="pd-hero__eyebrow">studio.signature</p>
+      <h1 class="pd-hero__title">Photo first.<br>Dither on top.</h1>
+      <p class="pd-hero__sub">Multi-layer parallax under a Bayer 8×8 dither overlay. Restaurant + med-spa default.</p>
+      <div class="pd-hero__ctas">
+        <a class="pd-cta pd-cta--primary" href="#reserve">Reserve a table</a>
+        <a class="pd-cta pd-cta--ghost" href="#menu">View menu</a>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="./hero.js"></script>
+</body>
+</html>

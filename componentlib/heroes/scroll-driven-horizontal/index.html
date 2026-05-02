@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>scroll-driven-horizontal hero — componentlib</title>
+  <link rel="stylesheet" href="../../tokens/tokens.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="sh-intro">
+    <div class="sh-intro__inner">
+      <p class="sh-intro__eyebrow">studio.signature</p>
+      <h1 class="sh-intro__title">Scroll down.<br>The showcase pans across.</h1>
+      <p class="sh-intro__sub">Scroll-driven horizontal pan via GSAP ScrollTrigger.</p>
+      <p class="sh-intro__hint">↓ scroll</p>
+    </div>
+  </header>
+
+  <section class="sh-pan" id="shPan">
+    <div class="sh-pan__inner" id="shInner">
+      <article class="sh-card">
+        <span class="sh-card__num">01</span>
+        <h2 class="sh-card__title">Black + bold</h2>
+        <p class="sh-card__desc">Heavy linework. Built to hold up at 70.</p>
+      </article>
+      <article class="sh-card">
+        <span class="sh-card__num">02</span>
+        <h2 class="sh-card__title">Fineline</h2>
+        <p class="sh-card__desc">Hair-thin. Single-needle precision.</p>
+      </article>
+      <article class="sh-card">
+        <span class="sh-card__num">03</span>
+        <h2 class="sh-card__title">Cover-ups</h2>
+        <p class="sh-card__desc">Old ink, reimagined. Most need 2–3 sittings.</p>
+      </article>
+      <article class="sh-card">
+        <span class="sh-card__num">04</span>
+        <h2 class="sh-card__title">Walk-in flash</h2>
+        <p class="sh-card__desc">Curated sheets. Tues + Sat.</p>
+      </article>
+      <article class="sh-card">
+        <span class="sh-card__num">05</span>
+        <h2 class="sh-card__title">Color & neo-trad</h2>
+        <p class="sh-card__desc">Heavy color, animal portraiture.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="sh-outro">
+    <div class="sh-outro__inner">
+      <h2 class="sh-outro__title">Ready?</h2>
+      <a class="sh-cta" href="#book">Book consult →</a>
+    </div>
+  </footer>
+
+  <script type="module" src="./hero.js"></script>
+</body>
+</html>

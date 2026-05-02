@@ -1,0 +1,90 @@
+/* webgl-particle hero — OGL particle field, mouse-repel */
+
+.wp-hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.wp-hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wp-hero__copy {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-16) var(--space-8);
+  max-width: 720px;
+  pointer-events: none;
+}
+
+.wp-hero__copy * { pointer-events: auto; }
+
+.wp-hero__eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-magenta);
+  margin: 0 0 var(--space-4);
+}
+
+.wp-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--type-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-6);
+  font-weight: 700;
+  text-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
+}
+
+.wp-hero__sub {
+  font-family: var(--font-body);
+  font-size: var(--type-md);
+  color: var(--color-paper);
+  opacity: 0.85;
+  max-width: 40ch;
+  margin: 0 0 var(--space-8);
+}
+
+.wp-hero__ctas { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+.wp-cta {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--type-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--color-paper);
+  transition: background var(--duration-fast), color var(--duration-fast), border-color var(--duration-fast);
+}
+.wp-cta--primary { background: var(--color-orange); color: var(--color-ink); border-color: var(--color-orange); }
+.wp-cta--primary:hover { background: var(--color-magenta); border-color: var(--color-magenta); }
+.wp-cta--ghost { color: var(--color-paper); }
+.wp-cta--ghost:hover { background: var(--color-paper); color: var(--color-ink); }
+
+.wp-hero__hint {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin: 0;
+  pointer-events: none;
+}

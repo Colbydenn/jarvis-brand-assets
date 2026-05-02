@@ -1,0 +1,136 @@
+/* canvas-dither hero — Astrodither-native. */
+
+.cd-hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cd-hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Astrodither pixel-grain — never smooth */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.cd-hero__copy {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-16) var(--space-8);
+  max-width: min(900px, 90vw);
+  margin: 0 auto;
+  text-align: center;
+  /* readability scrim against dithered art */
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7);
+}
+
+.cd-hero__eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--type-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-magenta);
+  margin: 0 0 var(--space-4);
+}
+
+.cd-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--type-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-6);
+  font-weight: 700;
+}
+
+.cd-hero__sub {
+  font-family: var(--font-body);
+  font-size: var(--type-md);
+  color: var(--color-paper);
+  opacity: 0.85;
+  margin: 0 0 var(--space-8);
+}
+
+.cd-hero__ctas {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cd-cta {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--type-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-sm);
+  transition: background var(--duration-fast) var(--ease-out-quart),
+              color var(--duration-fast) var(--ease-out-quart);
+}
+.cd-cta--primary {
+  background: var(--color-orange);
+  color: var(--color-ink);
+  border-color: var(--color-orange);
+}
+.cd-cta--primary:hover { background: var(--color-magenta); border-color: var(--color-magenta); }
+.cd-cta--ghost { color: var(--color-paper); }
+.cd-cta--ghost:hover { background: var(--color-paper); color: var(--color-ink); }
+
+.cd-hero__controls {
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: var(--type-xs);
+  color: var(--color-paper);
+  backdrop-filter: blur(8px);
+}
+.cd-hero__controls label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+.cd-hero__controls input[type="range"] {
+  accent-color: var(--color-orange);
+  width: 80px;
+}
+.cd-hero__controls button {
+  background: transparent;
+  border: 1px solid var(--color-paper);
+  color: var(--color-paper);
+  padding: var(--space-2) var(--space-3);
+  font: inherit;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+.cd-hero__controls button:hover { background: var(--color-orange); border-color: var(--color-orange); color: var(--color-ink); }
+
+@media (max-width: 640px) {
+  .cd-hero__controls { flex-wrap: wrap; justify-content: center; bottom: var(--space-3); width: calc(100% - 2 * var(--space-3)); }
+}
